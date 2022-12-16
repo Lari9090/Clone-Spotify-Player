@@ -8,6 +8,9 @@ let musicas = [
 let musica = document.querySelector('audio');
 let indexMusica = 0;
 
+let barra = document.querySelector('progress')
+
+let tempoDecorrido = document.querySelector('.inicio');
 
 let duracaoMusica = document.querySelector('.fim');
 
@@ -67,8 +70,8 @@ function pausarMusica(){
 }
 
 function atualizarBarra(){
-    barra.style.width = Math.floor((musica.currentTime / musica.duration) * 100) +'%';
     let barra = document.querySelector('progress');
+    barra.style.width = Math.floor((musica.currentTime / musica.duration) * 100) +'%';
     let tempoDecorrido = document.querySelector('.inicio');
     tempoDecorrido.textContent = segParaMinutos(Math.floor(musica.currentTime));
 }
