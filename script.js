@@ -19,7 +19,7 @@ let nomeArtista = document.querySelector('.descricao i');
 
 renderizarMusica(indexMusica);
 
-//eventos
+//os eventos
 
 document.querySelector('.botao-play').addEventListener('click', tocarMusica);
 
