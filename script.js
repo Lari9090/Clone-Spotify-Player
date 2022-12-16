@@ -1,7 +1,7 @@
 let musicas = [
-    {titulo:'As You Fade Away', artista:'Lari', src:'musicas/As You Fade Away - NEFFEX.mp3', img:'imagens/img01.jpg'},
-    {titulo:'Enough', artista:'Lari', src:'musicas/Enough - NEFFEX.mp3',img:'imagens/img02.jpg'},
-    {titulo:'Get Through', artista:'Lari', src:'musicas/Get Through - NEFFEX.mp3',img:'imagens/img03.jpg'}
+    {titulo:'As You Fade Away', artista:'Lari', src:'./musicas/As You Fade Away - NEFFEX.mp3', img:'./imagens/img01.png'},
+    {titulo:'Enough', artista:'Lari', src:'musicas/Enough - NEFFEX.mp3',img:'imagens/img02.png'},
+    {titulo:'Get Through', artista:'Lari', src:'musicas/Get Through - NEFFEX.mp3',img:'imagens/img03.png'}
 ];
 
 
@@ -67,8 +67,8 @@ function pausarMusica(){
 }
 
 function atualizarBarra(){
-    let barra = document.querySelector('progress');
     barra.style.width = Math.floor((musica.currentTime / musica.duration) * 100) +'%';
+    let barra = document.querySelector('progress');
     let tempoDecorrido = document.querySelector('.inicio');
     tempoDecorrido.textContent = segParaMinutos(Math.floor(musica.currentTime));
 }
